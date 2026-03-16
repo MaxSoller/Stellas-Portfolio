@@ -648,6 +648,11 @@ img {
     grid-column: 1 / -1;
     grid-row: auto;
   }
+
+  /* Featured card gallery is all position:absolute, so give it explicit height */
+  .bento-featured .project-image {
+    min-height: 320px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -674,6 +679,10 @@ img {
   }
 
   /* Featured card adjustments */
+  .bento-featured .project-image {
+    min-height: 240px;
+  }
+
   .bento-featured .project-info {
     padding: 20px;
   }
