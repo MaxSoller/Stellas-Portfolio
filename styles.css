@@ -653,6 +653,37 @@ img {
 @media (max-width: 600px) {
   .projects-grid.bento {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* Show descriptions on all cards in single-column layout */
+  .projects-grid.bento .project-card:not(.bento-featured) .project-info p {
+    display: block;
+  }
+
+  /* More generous padding for full-width cards */
+  .projects-grid.bento .project-card:not(.bento-featured) .project-info {
+    padding: 20px;
+  }
+
+  /* Scale image height down for mobile proportions */
+  .project-image img,
+  .project-image-placeholder,
+  .project-gallery {
+    height: 180px;
+  }
+
+  /* Featured card adjustments */
+  .bento-featured .project-info {
+    padding: 20px;
+  }
+
+  .bento-featured .project-info h3 {
+    font-size: 1.15rem;
+  }
+
+  .bento-featured .project-info p {
+    font-size: 0.85rem;
   }
 }
 
