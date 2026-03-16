@@ -8,21 +8,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
 </head>
 <body>
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="#hero" class="nav-logo">Stella Victor</a>
+      <a href="index.html" class="nav-logo">Stella Victor</a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
         <span></span>
         <span></span>
         <span></span>
       </button>
       <ul class="nav-links" id="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#resume">Resume</a></li>
+        <li><a href="#work">My Work</a></li>
+        <li><a href="#about">About Me</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -31,55 +31,51 @@
   <!-- Hero Section -->
   <section class="hero" id="hero">
     <div class="hero-content">
-      <p class="hero-greeting">Hello, I'm</p>
-      <h1 class="hero-name">Stella Victor</h1>
-      <h2 class="hero-title">Industrial Designer</h2>
-      <p class="hero-tagline">Crafting thoughtful, human-centered products that bridge form and function.</p>
-      <a href="#work" class="btn btn-primary">View My Work</a>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section class="section" id="about">
-    <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <div class="about-content">
-        <div class="about-image">
-          <div class="about-image-placeholder">
-            <span>Your Photo</span>
-          </div>
-        </div>
-        <div class="about-text">
-          <p>
-            I'm an industrial designer passionate about creating products that improve everyday life.
-            With a focus on user-centered design, I bring ideas from concept through prototyping to production-ready solutions.
-          </p>
-          <p>
-            My work spans consumer electronics, furniture, and sustainable packaging — always guided by a commitment to
-            functionality, aesthetics, and environmental responsibility.
-          </p>
-          <p>
-            When I'm not designing, you'll find me sketching, exploring materials, or visiting design exhibitions for inspiration.
-          </p>
-        </div>
+      <div class="hero-line hero-reveal" style="--delay: 0">
+        <p class="hero-greeting">Hello, I'm</p>
+      </div>
+      <div class="hero-line hero-reveal" style="--delay: 1">
+        <h1 class="hero-name">Stella Victor</h1>
+      </div>
+      <div class="hero-line hero-reveal" style="--delay: 2">
+        <h2 class="hero-title">Industrial <span class="hero-accent">Designer</span></h2>
+      </div>
+      <div class="hero-line hero-reveal" style="--delay: 3">
+        <p class="hero-tagline">Crafting thoughtful, human-centered products that bridge form and function.</p>
+      </div>
+      <div class="hero-line hero-reveal" style="--delay: 4; padding: 0 0 14px;">
+        <a href="#work" class="btn-3d">View My Work</a>
       </div>
     </div>
   </section>
 
+  <!-- DIVIDER: Wave (Hero → Work) -->
+  <div class="section-divider divider-hero" style="background: transparent">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path fill="var(--color-bg-alt)" d="M0,60 C240,20 480,90 720,50 C960,10 1200,80 1440,40 L1440,80 L0,80 Z"/>
+    </svg>
+  </div>
+
   <!-- Work / Projects Section -->
   <section class="section section-alt" id="work">
     <div class="container">
-      <h2 class="section-title">Selected Work</h2>
-      <div class="projects-grid">
+      <h2 class="section-title">Selected <span class="title-accent">Work</span></h2>
+      <div class="projects-grid bento">
 
-        <article class="project-card">
+        <article class="project-card bento-featured">
           <div class="project-image">
-            <div class="project-image-placeholder">Project 1</div>
+            <div class="project-gallery">
+              <img src="images/shiro.png" alt="Shiro — finished product" class="gallery-slide active">
+              <img src="images/Shiro2.png" alt="Shiro — concept sketches" class="gallery-slide">
+            </div>
           </div>
           <div class="project-info">
-            <h3>Modular Desk Lamp</h3>
-            <p>A customizable LED desk lamp with interchangeable shades and an adjustable arm, designed for modern workspaces.</p>
-            <span class="project-tag">Product Design</span>
+            <h3>Shiro</h3>
+            <p>En pappershållare som kombinerar funktion och form — stilren, minimalistisk design som smälter in i alla miljöer.</p>
+          </div>
+          <div class="project-details" hidden>
+            <p>Shiro är en pappershållare som kombinerar funktion och form — en stilren, minimalistisk design som enklare smälter in i alla miljöer utan att kompromissa användbarheten.</p>
+            <p><strong>Material:</strong> 3 och 4 mm ståltråd</p>
           </div>
         </article>
 
@@ -90,7 +86,12 @@
           <div class="project-info">
             <h3>Sustainable Packaging System</h3>
             <p>A biodegradable packaging solution for e-commerce, reducing waste while protecting products in transit.</p>
-            <span class="project-tag">Packaging Design</span>
+          </div>
+          <div class="project-details" hidden>
+            <p>This packaging system replaces expanded polystyrene with a molded-pulp alternative made from agricultural waste. The interlocking tray design eliminates the need for tape or adhesives, and the entire package is home-compostable within 90 days.</p>
+            <p><strong>Materials:</strong> Molded sugarcane bagasse pulp, soy-based ink printing</p>
+            <p><strong>Role:</strong> Designer — structural design, material research, drop-test validation</p>
+            <p><strong>Impact:</strong> 60% reduction in packaging weight, fully compostable</p>
           </div>
         </article>
 
@@ -101,7 +102,12 @@
           <div class="project-info">
             <h3>Ergonomic Kitchen Tools</h3>
             <p>A set of kitchen utensils designed for comfort and accessibility, tested with diverse user groups.</p>
-            <span class="project-tag">Consumer Products</span>
+          </div>
+          <div class="project-details" hidden>
+            <p>This five-piece utensil set was designed in collaboration with occupational therapists to address grip fatigue and limited dexterity. Each handle features a soft-touch overmold with subtle finger guides, and the balanced weight distribution reduces wrist strain during extended use.</p>
+            <p><strong>Materials:</strong> Stainless steel heads, glass-reinforced nylon handles, TPE overmold</p>
+            <p><strong>Role:</strong> Lead designer — user research, ergonomic testing, production liaison</p>
+            <p><strong>Testing:</strong> Validated with 40+ participants across age and ability groups</p>
           </div>
         </article>
 
@@ -112,7 +118,12 @@
           <div class="project-info">
             <h3>Urban Bench Collection</h3>
             <p>Public seating designed for urban environments, balancing durability, aesthetics, and community interaction.</p>
-            <span class="project-tag">Furniture Design</span>
+          </div>
+          <div class="project-details" hidden>
+            <p>The Urban Bench Collection reimagines public seating as a social catalyst. The curved, segmented form invites both individual rest and group conversation. A powder-coated steel frame provides structural longevity, while FSC-certified hardwood slats add warmth and comfort.</p>
+            <p><strong>Materials:</strong> Powder-coated galvanized steel, FSC-certified ipe wood slats</p>
+            <p><strong>Role:</strong> Designer — concept, scale models, municipal review presentations</p>
+            <p><strong>Installation:</strong> Piloted in two city parks with positive community feedback</p>
           </div>
         </article>
 
@@ -123,7 +134,12 @@
           <div class="project-info">
             <h3>Portable Air Purifier</h3>
             <p>A compact, rechargeable air purifier for personal use, with a minimal footprint and quiet operation.</p>
-            <span class="project-tag">Product Design</span>
+          </div>
+          <div class="project-details" hidden>
+            <p>Designed for desk, bedside, or travel use, this personal air purifier packs a true HEPA filter into a cylinder barely larger than a coffee cup. A brushless DC motor keeps noise below 28 dB on the lowest setting, and the USB-C rechargeable battery lasts up to 8 hours.</p>
+            <p><strong>Materials:</strong> Recycled ABS shell, HEPA H13 filter, brushless DC motor</p>
+            <p><strong>Role:</strong> Lead designer — industrial design, CMF selection, DFM optimization</p>
+            <p><strong>Features:</strong> 3 fan speeds, filter-change indicator LED, magnetic top cap</p>
           </div>
         </article>
 
@@ -134,7 +150,12 @@
           <div class="project-info">
             <h3>Children's Learning Toy</h3>
             <p>An interactive toy that teaches spatial reasoning through play, made from safe, recycled materials.</p>
-            <span class="project-tag">Toy Design</span>
+          </div>
+          <div class="project-details" hidden>
+            <p>This modular block set uses interlocking geometry to teach children ages 3–7 about shapes, symmetry, and spatial relationships. Each block is made from recycled HDPE with rounded edges and non-toxic pigments. The set includes a visual guide with progressive challenges.</p>
+            <p><strong>Materials:</strong> Recycled HDPE, non-toxic water-based pigments</p>
+            <p><strong>Role:</strong> Designer — toy design, safety compliance (ASTM F963), color studies</p>
+            <p><strong>Testing:</strong> Play-tested with 25 children across three age groups</p>
           </div>
         </article>
 
@@ -142,76 +163,147 @@
     </div>
   </section>
 
+  <!-- DIVIDER: Wave (Work → About) -->
+  <div class="section-divider" style="background: var(--color-bg-alt)">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path fill="var(--color-bg)" d="M0,30 C180,70 360,10 540,55 C720,80 900,20 1080,65 C1260,30 1380,50 1440,40 L1440,80 L0,80 Z"/>
+    </svg>
+  </div>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="about-layout">
+      <div class="about-image">
+        <img src="images/about.png" alt="Stella Victor">
+      </div>
+      <div class="about-body">
+        <h2 class="about-heading">About <span class="title-accent">Me</span></h2>
+        <p>
+          My name is <span class="title-accent">Stella Victor</span> and I am a student at the Industrial Design programme at LTH. I am a positive, ambitious and quick-learning person who works well with others.
+        </p>
+        <p>
+          I always strive to contribute to a positive atmosphere and give my full commitment in every workplace and environment I find myself in.
+        </p>
+        <p>
+          With valuable experience from a range of different workplaces and educations, I have developed a strong adaptability and the ability to take on new challenges and tasks.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER: Wave (About → Resume) -->
+  <div class="section-divider" style="background: var(--color-bg)">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path fill="var(--color-bg-alt)" d="M0,50 C320,80 480,15 720,55 C960,75 1100,25 1280,60 C1360,45 1420,65 1440,50 L1440,80 L0,80 Z"/>
+    </svg>
+  </div>
+
   <!-- Resume Section -->
-  <section class="section" id="resume">
+  <section class="section section-alt" id="resume">
     <div class="container">
-      <h2 class="section-title">Resume</h2>
+      <h2 class="section-title">My <span class="title-accent">Resume</span></h2>
       <div class="resume-content">
         <div class="resume-column">
-          <h3>Experience</h3>
+          <h3>Education</h3>
           <div class="resume-item">
-            <h4>Senior Industrial Designer</h4>
-            <p class="resume-meta">Design Studio — 2022 – Present</p>
-            <p>Leading product development from concept to manufacturing, managing client relationships and cross-functional teams.</p>
+            <h4>Industrial Design BA</h4>
+            <p class="resume-meta">Lund University, LTH — 2024 – Present</p>
           </div>
           <div class="resume-item">
-            <h4>Industrial Designer</h4>
-            <p class="resume-meta">Product Agency — 2019 – 2022</p>
-            <p>Developed consumer products across electronics, home goods, and lifestyle categories.</p>
+            <h4>Design and Art</h4>
+            <p class="resume-meta">KV Art School, Gothenburg — 2023 – 2024</p>
           </div>
           <div class="resume-item">
-            <h4>Junior Designer</h4>
-            <p class="resume-meta">Creative Lab — 2017 – 2019</p>
-            <p>Supported senior designers with research, sketching, CAD modeling, and prototype fabrication.</p>
+            <h4>Introduction to Product Design</h4>
+            <p class="resume-meta">CSM College of Art and Design, London UK — 2023</p>
+          </div>
+
+          <h3>Work Experience</h3>
+          <div class="resume-item">
+            <h4>Waitress</h4>
+            <p class="resume-meta">Hypoteket i Lund — 2024 – Onward</p>
+          </div>
+          <div class="resume-item">
+            <h4>Sales, Paint Department</h4>
+            <p class="resume-meta">Bauhaus Hardware Store, Gothenburg — 2024</p>
+          </div>
+          <div class="resume-item">
+            <h4>Head Waitress</h4>
+            <p class="resume-meta">Sketch Restaurant, London UK — 2023</p>
+          </div>
+          <div class="resume-item">
+            <h4>Service Manager, Advisory Role</h4>
+            <p class="resume-meta">SEB Bank, Gothenburg — 2022</p>
+          </div>
+          <div class="resume-item">
+            <h4>Waitress</h4>
+            <p class="resume-meta">Hotel Gletscherblick, St. Anton, Austria — 2021</p>
           </div>
         </div>
         <div class="resume-column">
           <h3>Skills</h3>
           <ul class="skills-list">
-            <li>Concept Sketching</li>
-            <li>CAD (SolidWorks, Rhino, Fusion 360)</li>
-            <li>3D Printing &amp; Prototyping</li>
-            <li>User Research &amp; Testing</li>
-            <li>Materials &amp; Manufacturing</li>
-            <li>Adobe Creative Suite</li>
-            <li>KeyShot Rendering</li>
-            <li>Design Thinking</li>
+            <li>Adobe Illustrator</li>
+            <li>Adobe Photoshop</li>
+            <li>Adobe Fresco</li>
+            <li>Adobe InDesign</li>
+            <li>Fusion 360</li>
+            <li>SolidWorks</li>
+            <li>CNC Milling</li>
+            <li>Ceramics &amp; Glazing</li>
+            <li>Multilingual (Swedish &amp; English)</li>
           </ul>
-          <h3>Education</h3>
+
+          <h3>Engagements</h3>
           <div class="resume-item">
-            <h4>BFA in Industrial Design</h4>
-            <p class="resume-meta">School of Design — 2013 – 2017</p>
+            <h4>Business Committee, A-Guild at LTH</h4>
+            <p>Responsible for Industrial Design.</p>
+          </div>
+          <div class="resume-item">
+            <h4>SRID</h4>
+            <p>Member of the student council for Industrial Design at LTH.</p>
+          </div>
+          <div class="resume-item">
+            <h4>Lundaspexarna</h4>
+            <p>Member of the PR, product and design sections in the student theater.</p>
+          </div>
+          <div class="resume-item">
+            <h4>Lundakarnevalen 2026</h4>
+            <p>Manager of communication and participants in the cabaret section.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- DIVIDER: Wave (Resume → Contact) -->
+  <div class="section-divider" style="background: var(--color-bg-alt)">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path fill="var(--color-bg)" d="M0,45 C200,70 400,20 600,55 C800,80 1000,30 1200,60 C1340,40 1400,55 1440,45 L1440,80 L0,80 Z"/>
+    </svg>
+  </div>
+
   <!-- Contact Section -->
-  <section class="section section-alt" id="contact">
+  <section class="section" id="contact">
     <div class="container">
-      <h2 class="section-title">Get in Touch</h2>
+      <h2 class="section-title">Get in <span class="title-accent">Touch</span></h2>
       <p class="contact-intro">Interested in working together? I'd love to hear from you.</p>
       <div class="contact-content">
         <div class="contact-info">
-          <a href="mailto:stella@example.com" class="contact-link">
+          <a href="mailto:stella.victor.home@gmail.com" class="contact-link">
             <span class="contact-icon">✉</span>
-            stella@example.com
+            stella.victor.home@gmail.com
           </a>
           <a href="https://linkedin.com" target="_blank" rel="noopener" class="contact-link">
             <span class="contact-icon">in</span>
             LinkedIn
-          </a>
-          <a href="https://behance.net" target="_blank" rel="noopener" class="contact-link">
-            <span class="contact-icon">Bē</span>
-            Behance
           </a>
         </div>
         <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
           <input type="text" name="name" placeholder="Your Name" required>
           <input type="email" name="email" placeholder="Your Email" required>
           <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-          <button type="submit" class="btn btn-primary">Send Message</button>
+          <button type="submit" class="btn-3d">Send Message</button>
         </form>
       </div>
     </div>
@@ -223,6 +315,25 @@
       <p>&copy; 2026 Stella Victor. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Project Modal -->
+  <div class="modal-overlay" id="project-modal">
+    <div class="modal">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-inner">
+        <div class="modal-image" id="modal-image-wrap">
+          <div class="project-image-placeholder" id="modal-image"></div>
+          <button class="gallery-prev modal-gallery-prev" aria-label="Previous image">&#8249;</button>
+          <button class="gallery-next modal-gallery-next" aria-label="Next image">&#8250;</button>
+          <div class="gallery-dots" id="modal-dots"></div>
+        </div>
+        <div class="modal-body">
+          <h2 id="modal-title"></h2>
+          <div id="modal-details"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
