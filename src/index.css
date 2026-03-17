@@ -2,6 +2,25 @@
    Stella Victor — Industrial Design Portfolio
    ============================================= */
 
+/* --- Scroll Progress Bar --- */
+.scroll-progress-track {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 1100;
+  background: transparent;
+}
+
+.scroll-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-hover));
+  transition: width 0.1s linear;
+  border-radius: 0 2px 2px 0;
+  box-shadow: 0 0 8px rgba(155, 17, 30, 0.4);
+}
+
 /* --- Reset & Base --- */
 *,
 *::before,

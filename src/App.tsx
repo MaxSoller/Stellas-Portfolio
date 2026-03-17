@@ -1,4 +1,5 @@
 import { useLenis } from './hooks/useLenis'
+import ScrollProgress from './components/ScrollProgress'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import SectionDivider from './components/SectionDivider'
@@ -37,6 +38,7 @@ export default function App() {
 
   return (
     <>
+      <ScrollProgress />
       <Navbar lenisRef={lenisRef} />
       <Hero lenisRef={lenisRef} />
 
